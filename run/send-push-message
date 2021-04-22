@@ -54,7 +54,7 @@ function send_webhook () {
   log "Sending Webhook message."
   
   curl -X POST \
-    -d "{\"value1\":\"${title}\",\"value2\":\"${message}\"}" \
+    -d "{\"text\":\"${title}\",\"text\":\"${message}\"}" \
     -H "Content-Type: application/json" \
     "$WEBHOOK_URL"
 }
