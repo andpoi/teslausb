@@ -386,8 +386,6 @@ function clean_cam_mount {
 function archive_teslacam_clips () {
   log "Checking saved folder count..."
 
-  ensure_cam_file_is_mounted
-
   local -r overlaylower=/mutable/TeslaCam
   local -r overlayupper=/tmp/cam/upper
   local -r overlaywork=/tmp/cam/work
