@@ -801,8 +801,6 @@ then
 
   /root/bin/awake_start
 
-  connect_usb_drives_to_host
-
   archive_clips
 
   /root/bin/awake_stop
