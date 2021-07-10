@@ -6,7 +6,7 @@ function connectionmonitor {
   do
     for _ in {1..5}
     do
-      if timeout 6 /root/bin/archive-is-reachable.sh "$ARCHIVE_SERVER"
+      if timeout 10 /root/bin/archive-is-reachable.sh "$ARCHIVE_SERVER"
       then
         # sleep and then continue outer loop
         sleep 5
