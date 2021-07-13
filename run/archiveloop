@@ -124,7 +124,6 @@ function wait_for_archive_to_be_reachable () {
       rm /tmp/archive_is_reachable
       break
     fi
-    check_if_usb_gadget_is_mounted
     sleep 1
   done
 }
@@ -811,10 +810,14 @@ then
   connect_usb_drives_to_host
 
   wait_for_archive_to_be_unreachable
+
+  check_if_usb_gadget_is_mounted
 else
   slowblink
 
   connect_usb_drives_to_host
+
+  check_if_usb_gadget_is_mounted
 fi
 
 while true
