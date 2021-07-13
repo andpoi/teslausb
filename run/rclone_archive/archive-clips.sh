@@ -1,19 +1,20 @@
 #!/bin/bash -eu
-#!/bin/bash -eu
 
 function connectionmonitor {
   while true
   do
     for _ in {1..5}
     do
-      if timeout 15 /root/bin/archive-is-reachable.sh "$ARCHIVE_SERVER"
+      if timeout 6 /root/bin/archive-is-reachable.sh "$ARCHIVE_SERVER"
       then
         # sleep and then continue outer loop
-        sleep 5
+        sleep 60
         continue 2
       fi
     done
     log "connection dead, killing archive-clips"
+    killall rclone || true
+    sleep 3
     killall -9 rclone || true
     kill -9 "$1" || true
     return
