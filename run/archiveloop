@@ -810,18 +810,10 @@ then
   connect_usb_drives_to_host
 
   wait_for_archive_to_be_unreachable
-
-  check_if_usb_gadget_is_mounted
 else
   slowblink
 
-  sleep 30
-
   connect_usb_drives_to_host
-
-  sleep 5
-
-  check_if_usb_gadget_is_mounted
 fi
 
 while true
@@ -856,10 +848,6 @@ do
   doubleblink
 
   connect_usb_drives_to_host
-
-  sleep 10
-
-  check_if_usb_gadget_is_mounted
 
   wait_for_archive_to_be_unreachable
 
