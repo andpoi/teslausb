@@ -809,10 +809,6 @@ then
 
   connect_usb_drives_to_host
 
-  sleep 10
-
-  check_if_usb_gadget_is_mounted
-
   wait_for_archive_to_be_unreachable
 else
   slowblink
@@ -823,8 +819,6 @@ fi
 while true
 do
   slowblink
-
-  check_if_usb_gadget_is_mounted
 
   wait_for_archive_to_be_reachable
 
