@@ -813,7 +813,11 @@ then
 else
   slowblink
 
+  disconnect_usb_drives_from_host
+
   connect_usb_drives_to_host
+
+  check_if_usb_gadget_is_mounted
 fi
 
 while true
