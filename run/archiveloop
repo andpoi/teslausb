@@ -814,11 +814,9 @@ then
 else
   slowblink
 
-  disconnect_usb_drives_from_host
-
-  fix_errors_in_images
-
   connect_usb_drives_to_host
+
+  sleep 30
 
   check_if_usb_gadget_is_mounted
 fi
