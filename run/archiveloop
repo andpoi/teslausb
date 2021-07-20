@@ -124,6 +124,7 @@ function wait_for_archive_to_be_reachable () {
       rm /tmp/archive_is_reachable
       break
     fi
+    check_if_usb_gadget_is_mounted
     sleep 1
   done
 }
