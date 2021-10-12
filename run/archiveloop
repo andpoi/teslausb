@@ -107,6 +107,10 @@ function archive_is_reachable () {
 function connect_usb_drives_to_host() {
   log "Connecting usb to host..."
   modprobe g_mass_storage
+  sleep 5
+  modprobe -r g_mass_storage
+  sleep 5
+  modprobe g_mass_storage
   log "Connected usb to host."
 }
 
